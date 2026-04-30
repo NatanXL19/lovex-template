@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import { useRiddleResult } from "@/context/RiddleResultContext";
 
 type Riddle = {
   question: string;
@@ -28,12 +29,14 @@ const RiddlePage = () => {
   const [index, setIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [feedback, setFeedback] = useState<string | null>(null);
+  const { addCorrect, addWrong } = useRiddleResult();
 
   const currentRiddle = riddles[index];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (userAnswer.trim().toLowerCase() === currentRiddle.answer.toLowerCase()) {
+      addCorrect();
       setFeedback("✅ Correto! Próxima charada...");
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % riddles.length);
@@ -41,6 +44,7 @@ const RiddlePage = () => {
         setFeedback(null);
       }, 1500);
     } else {
+      addWrong();
       setFeedback("❌ Errado, tente novamente.");
     }
   };
