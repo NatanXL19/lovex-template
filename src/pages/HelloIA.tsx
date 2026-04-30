@@ -6,11 +6,12 @@ import {
   CardTitle,
   CardContent,
 } from "@/components/ui/card";
+import Footer from "@/components/Footer";
 
 const HelloIA = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-background p-4">
-      <Card className="w-full max-w-lg rounded-xl border shadow-lg dark:shadow-none dark:border-muted">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-primary/10 to-background p-4">
+      <Card className="w-full max-w-lg rounded-xl border shadow-lg dark:shadow-none dark:border-muted mb-8">
         <CardHeader className="bg-primary/5 dark:bg-primary/20 p-6 rounded-t-xl">
           <CardTitle className="text-3xl font-bold text-center text-primary">
             Olá IA
@@ -22,6 +23,7 @@ const HelloIA = () => {
           </p>
         </CardContent>
       </Card>
+      <Footer />
     </section>
   );
 };
