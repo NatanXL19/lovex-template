@@ -7,6 +7,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import Clock from "@/components/Clock";
 
 const HelloIA = () => {
   return (
@@ -21,6 +22,8 @@ const HelloIA = () => {
           <p className="text-lg text-muted-foreground">
             Seja bem‑vindo(a) à sua nova aplicação! Explore e divirta‑se.
           </p>
+          {/* Relógio digital de Brasília */}
+          <Clock />
         </CardContent>
       </Card>
       <Footer />
