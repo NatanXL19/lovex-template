@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import Footer from "@/components/Footer";
 import Clock from "@/components/Clock";
-import RandomMinecraftImage from "@/components/RandomMinecraftImage";
 
 const HelloIA = () => {
   return (
@@ -25,8 +24,6 @@ const HelloIA = () => {
           </p>
           {/* Relógio digital de Brasília */}
           <Clock />
-          {/* Imagem aleatória de Minecraft a cada 15 s */}
-          <RandomMinecraftImage />
         </CardContent>
       </Card>
       <Footer />
