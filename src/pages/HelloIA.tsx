@@ -1,19 +1,28 @@
 "use client";
 
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "@/components/ui/card";
 
 const HelloIA = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-2xl text-center">Olá IA</CardTitle>
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-background p-4">
+      <Card className="w-full max-w-lg rounded-xl border shadow-lg dark:shadow-none dark:border-muted">
+        <CardHeader className="bg-primary/5 dark:bg-primary/20 p-6 rounded-t-xl">
+          <CardTitle className="text-3xl font-bold text-center text-primary">
+            Olá IA
+          </CardTitle>
         </CardHeader>
-        <CardContent className="text-center">
-          <p className="text-lg">Seja bem‑vindo(a) à sua nova aplicação!</p>
+        <CardContent className="p-6 text-center">
+          <p className="text-lg text-muted-foreground">
+            Seja bem‑vindo(a) à sua nova aplicação! Explore e divirta‑se.
+          </p>
         </CardContent>
       </Card>
-    </div>
+    </section>
   );
 };
 
