@@ -8,7 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import HelloIA from "./pages/HelloIA";
 import RiddlePage from "./pages/RiddlePage";
-import ResultPage from "./pages/ResultPage";
+import ListPage from "./pages/ListPage";
 import BBQIdeas from "./pages/BBQIdeas";
 
 const queryClient = new QueryClient();
@@ -24,7 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/hello" element={<HelloIA />} />
             <Route path="/riddle" element={<RiddlePage />} />
-            <Route path="/result" element={<ResultPage />} />
+            <Route path="/list" element={<ListPage />} />
             <Route path="/bbq" element={<BBQIdeas />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

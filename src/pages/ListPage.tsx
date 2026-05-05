@@ -21,7 +21,7 @@ type Task = {
 
 const generateId = () => Math.random().toString(36).substring(2, 9);
 
-const ResultPage = () => {
+const ListPage = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
 
@@ -58,7 +58,6 @@ const ResultPage = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6 space-y-4">
-          {/* Input para nova tarefa */}
           <div className="flex gap-2">
             <Input
               placeholder="Nova tarefa"
@@ -69,7 +68,6 @@ const ResultPage = () => {
             <Button onClick={addTask}>Adicionar</Button>
           </div>
 
-          {/* Lista de tarefas */}
           <ul className="space-y-2">
             {tasks.map((task) => (
               <li
@@ -85,7 +83,11 @@ const ResultPage = () => {
                   value={task.text}
                   onChange={(e) => updateText(task.id, e.target.value)}
                 />
-                <Button variant="destructive" size="icon" onClick={() => deleteTask(task.id)}>
+                <Button
+                  variant="destructive"
+                  size="icon"
+                  onClick={() => deleteTask(task.id)}
+                >
                   ✕
                 </Button>
               </li>
@@ -98,4 +100,4 @@ const ResultPage = () => {
   );
 };
 
-export default ResultPage;
+export default ListPage;
