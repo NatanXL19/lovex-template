@@ -8,7 +8,7 @@ const NavBar = () => {
     { to: "/", label: "Home" },
     { to: "/hello", label: "Olá IA" },
     { to: "/riddle", label: "Charada" },
-    { to: "/result", label: "Resultado" },
+    { to: "/list", label: "Lista" },
     { to: "/bbq", label: "Churrasco" },
   ];
 
