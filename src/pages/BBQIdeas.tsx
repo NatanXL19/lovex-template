@@ -4,6 +4,7 @@ import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
 
 const suggestions = [
   "Carne bovina (picanha, alcatra, maminha)",
@@ -26,6 +27,7 @@ const suggestions = [
 const BBQIdeas = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      <NavBar />
       <Card className="w-full max-w-2xl rounded-xl border shadow-lg dark:shadow-none dark:border-muted">
         <CardHeader className="bg-primary/5 dark:bg-primary/20 p-6 rounded-t-xl">
           <CardTitle className="text-2xl font-bold text-center text-blue-900">
